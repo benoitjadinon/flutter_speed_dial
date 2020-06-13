@@ -4,6 +4,7 @@ class AnimatedFloatingButton extends StatelessWidget {
   final bool visible;
   final VoidCallback callback;
   final VoidCallback onLongPress;
+  final GestureLongPressEndCallback onLongPressEnd;
   final Widget child;
   final Color backgroundColor;
   final Color foregroundColor;
@@ -46,6 +47,7 @@ class AnimatedFloatingButton extends StatelessWidget {
           height: visible ? 56.0 : 0.0,
           child: GestureDetector(
             onLongPress: onLongPress,
+            onLongPressEnd: onLongPressEnd,
             child: FloatingActionButton(
               child: visible ? child : null,
               backgroundColor: backgroundColor,
