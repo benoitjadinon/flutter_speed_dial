@@ -26,6 +26,7 @@ class AnimatedFloatingButton extends StatelessWidget {
     this.shape = const CircleBorder(),
     this.curve = Curves.linear,
     this.onLongPress,
+    this.onLongPressEnd,
   });
 
   @override
